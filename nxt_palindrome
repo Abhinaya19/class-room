@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+    int n,sum=0,n1,n2,flag=0,r;
+    printf("\nenter number");
+    scanf("%d",&n);
+    n1=n+1;
+    while(flag==0)
+    {
+        n2=n1;
+        sum=0;
+        while(n2>0)
+        {
+            r=n2%10;
+            sum=sum*10+r;
+            n2=n2/10;
+        }
+        if(n1==sum)
+        {
+            printf("%d",sum);
+            flag=1;
+        }
+        else
+        {
+            flag=0;
+            n1++;
+        }
+    }
+}
